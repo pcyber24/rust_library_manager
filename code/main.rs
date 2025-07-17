@@ -1,8 +1,0 @@
-
-
-
-fn main(){
-
-
-    return 0;
-}
