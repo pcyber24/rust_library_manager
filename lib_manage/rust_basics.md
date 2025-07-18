@@ -72,3 +72,39 @@ fn fair_dice_roll() -> i32 {
 }
 
 when referencing for fn call (print_name(&user2)) the "&" makes the variable immutable
+
+### structs
+
+init a new struct for user
+struct User{
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+
+fn build_user(email: String, username: String) -> User {
+    User {
+        email, // shorthand to pull from funct var
+        username, // shorthand to pull from funct var
+        active: true,
+        sign_in_count: 1,
+    }
+}
+
+fn main(){
+    let user1 = User {
+        email: String::from("Foo"),
+        username: String::from("Bar"),
+        active: true,
+        sign_in_count: 1
+    };
+
+    let name = user1.username;
+    user1.username = String::from("NameHere");
+
+    let uyser2 = buld_user(
+        String::from("emailHere"),
+        String::from("unameHere")
+    );
+}
